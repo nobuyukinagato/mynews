@@ -25,11 +25,11 @@
                         <label class="col-md-2">性別</label>
                         <div class="col-md-10">
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="gender" value="{{ old('male') }}">
+                                <input type="radio" class="form-check-input" name="gender" value="m">
                                 <label class="form-check-label" for = "male">男</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" name="gender" value="{{ old('male') }}">
+                                <input type="radio" class="form-check-input" name="gender" value="f">
                                 <label class="form-check-label" for = "female">女</label>                        
                             </div>
                         </div>       

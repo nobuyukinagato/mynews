@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Profile;
+use App\ProfileHistory;
+use Carbon\Carbon;
+
 
 class ProfileController extends Controller
 {
@@ -66,6 +69,7 @@ class ProfileController extends Controller
         // if(empty($profile)){
         //     abort(404);
         // }
+        
         return view('admin.profile.edit',['profile_form' => $profile]);
     }
 
@@ -80,10 +84,10 @@ class ProfileController extends Controller
       
 
     // 　フォームから送信されてきた_tokenを削除する
-      unset($profileform['_token']);
+      unset($profile_form['_token']);
 
       // 該当するデータを上書きして保存する
       $profile->fill($profile_form)->save();
-        return redirect('admin/profile/edit');
+        return redirect('admin/profile');
     }
 }
